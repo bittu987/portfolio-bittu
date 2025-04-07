@@ -86,7 +86,7 @@ function App() {
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Frontend Developer | React Enthusiast
+            Software Developer | React Enthusiast
           </motion.p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -147,12 +147,13 @@ function App() {
                 Redux Toolkit
               </span>
               , and{" "}
-              <span className="text-pink-400 font-semibold">Bootstrap CSS</span>.
-              I specialize in building responsive and scalable web applications,
-              optimizing performance, and implementing intuitive UI/UX designs.
-              I have experience integrating RESTful APIs, maintaining clean and
-              modular code, and collaborating with cross-functional teams to
-              deliver high-quality products efficiently.
+              <span className="text-pink-400 font-semibold">Bootstrap CSS</span>
+              . I specialize in building responsive and scalable web
+              applications, optimizing performance, and implementing intuitive
+              UI/UX designs. I have experience integrating RESTful APIs,
+              maintaining clean and modular code, and collaborating with
+              cross-functional teams to deliver high-quality products
+              efficiently.
             </p>
             <p
               className={`mt-4 text-lg leading-relaxed ${
@@ -177,7 +178,7 @@ function App() {
                 }`}
               >
                 <li>
-                <strong>MCA</strong> – Master of Computer Applications
+                  <strong>MCA</strong> – Master of Computer Applications
                 </li>
                 <li>
                   <strong>BCA</strong> – Bachelor of Computer Applications
@@ -207,7 +208,9 @@ function App() {
                 </li>
                 <li>
                   ✅ Frontend Specialization –{" "}
-                  <span className="text-purple-400">React & Redux & JWT Token</span>
+                  <span className="text-purple-400">
+                    React & Redux & JWT Token
+                  </span>
                 </li>
               </ul>
             </div>
