@@ -34,7 +34,7 @@ function App() {
 
   const downloadResume = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1byyYXZLN-E3Wh7b-49mnnmI9Gt53tkE0/view?usp=drive_link";
+      "https://drive.google.com/file/d/1byyYXZLN-E3Wh7b-49mnnmI9Gt53tkE0/view?usp=sharing";
     window.open(resumeUrl, "_blank");
   };
 
