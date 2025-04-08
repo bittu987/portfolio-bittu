@@ -50,10 +50,10 @@ function App() {
     }`}
     >
       {/* Navigation */}
-      <nav className="flex justify-end items-center p-6">
+      <nav className="flex justify-end items-center p-2">
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className={`p-1 text-2xl transition-all duration-300 hover:scale-110`}
+          className={`p-1 text-2xl transition-all duration-300 hover:scale-110 hidden`}
           aria-label="Toggle Dark Mode"
         >
           {darkMode ? "☀️" : "🌙"}
@@ -127,7 +127,7 @@ function App() {
           >
             Hi, I'm{" "}
             <span
-  className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%_200%] animate-textShine transition-all duration-300 hover:drop-shadow-[0_0_10px_#92FE9D] hover:brightness-125"
+  className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%_200%] animate-textShine transition-all duration-300  hover:drop-shadow-[0_0_10px_#92FE9D] hover:brightness-125"
 >
   Bittu Pathania
 </span>
@@ -154,7 +154,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section className="max-w-4xl mx-auto py-20 px-6">
+      <section className="max-w-6xl mx-auto py-20 px-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -210,6 +210,13 @@ function App() {
               efficiently.
             </p>
             <p
+            className={`mt-4 text-lg leading-relaxed ${
+                  darkMode ? "text-gray-300" : "text-gray-700"
+               }`}
+            >
+                    📍 <strong>Location:</strong> Currently based in <strong>New Delhi</strong>, originally from <strong>Uttarakhand</strong>.
+            </p>
+            <p
               className={`mt-4 text-lg leading-relaxed ${
                 darkMode ? "text-gray-300" : "text-gray-700"
               }`}
@@ -258,16 +265,22 @@ function App() {
               >
                 <li>
                   ✅ Full Stack Developer –{" "}
+                  <a href="https://www.geekster.in/" target="_blank">
                   <span className="text-blue-400">Geekster</span>
+                  </a>
+                  
                 </li>
                 <li>
-                  ✅ Frontend Specialization –{" "}
-                  <span className="text-purple-400">
-                    React & Redux & JWT Token
-                  </span>
+                  ✅ Frontend Specialization –{" "}                 
+                  <span  className="text-purple-400">
+                    ReactJS
+                  </span>                 
                 </li>
               </ul>
             </div>
+            <p>
+          
+        </p>
           </div>
         </motion.div>
       </section>
@@ -285,45 +298,62 @@ function App() {
           </span>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {[
-            { name: "React", icon: "⚛️" },
-            { name: "Redux Toolkit", icon: "🔄" },
-            { name: "JavaScript", icon: "📜" },
-            { name: "Tailwind CSS", icon: "🎨" },
-            { name: "Firebase", icon: "🔥" },
-            { name: "Git", icon: "🐙" },
-            { name: "GitHub", icon: "💻" },
-            { name: "HTML5", icon: "🖊️" },
-            { name: "CSS3", icon: "🎀" },
-            { name: "Node.js", icon: "🟢" },
-            { name: "MongoDB", icon: "🍃" },
-            { name: "Excel", icon: "📊" },
-          ].map((skill, index) => (
-            <motion.div
-  key={index}
-  whileHover={{ scale: 1.05, y: -5 }}
-  whileTap={{ scale: 0.95 }}
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.5, delay: index * 0.1 }}
-  className={`p-6 rounded-xl shadow-lg flex flex-col items-center transition-all duration-300 ease-in-out ${
-    darkMode
-      ? "bg-gray-800 hover:shadow-[0_0_20px_#60a5fa] hover:bg-gradient-to-r hover:from-gray-800 hover:via-gray-700 hover:to-gray-800"
-      : "bg-white hover:shadow-[0_0_20px_#6366f1] hover:bg-gradient-to-r hover:from-white hover:via-purple-100 hover:to-white"
-  }`}
->
-  <span className="text-3xl mb-2">{skill.icon}</span>
-  <h3
-    className={`font-bold text-lg transition-colors ${
-      darkMode ? "text-white" : "text-gray-800"
-    }`}
-  >
-    {skill.name}
-  </h3>
-</motion.div>
-          ))}
-        </div>
+  {[
+    { url: "https://react.dev/", name: "React", icon: "⚛️" },
+    { url: "https://redux-toolkit.js.org/", name: "Redux Toolkit", icon: "🔄" },
+    {url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", name: "JavaScript", icon: "📜" },
+    {url: "https://tailwindcss.com/", name: "Tailwind CSS", icon: "🎨" },
+    {url: "https://firebase.google.com/docs", name: "Firebase", icon: "🔥" },
+    {url: "https://git-scm.com/doc", name: "Git", icon: "🐙" },
+    {url: "https://docs.github.com/en", name: "GitHub", icon: "💻" },
+    {url: "https://developer.mozilla.org/en-US/docs/Web/HTML", name: "HTML5", icon: "🖊️" },
+    {url: "https://developer.mozilla.org/en-US/docs/Web/CSS", name: "CSS3", icon: "🎀" },
+    {url: "https://nodejs.org/docs/latest/api/", name: "Node.js", icon: "🟢" },
+    {url: "https://www.mongodb.com/docs/", name: "MongoDB", icon: "🍃" },
+    {url: "https://www.customguide.com/cheat-sheet/excel-cheat-sheet.pdf", name: "Excel", icon: "📊" },
+  ].map((skill, index) => {
+    const content = (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.05, y: -5 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className={`p-6 rounded-xl shadow-lg flex flex-col items-center transition-all duration-300 ease-in-out ${
+          darkMode
+            ? "bg-gray-800 hover:shadow-[0_0_20px_#60a5fa] hover:bg-gradient-to-r hover:from-gray-800 hover:via-gray-700 hover:to-gray-800"
+            : "bg-white hover:shadow-[0_0_20px_#6366f1] hover:bg-gradient-to-r hover:from-white hover:via-purple-100 hover:to-white"
+        }`}
+      >
+        <span className="text-3xl mb-2">{skill.icon}</span>
+        <h3
+          className={`font-bold text-lg transition-colors ${
+            darkMode ? "text-white" : "text-gray-800"
+          }`}
+        >
+          {skill.name}
+        </h3>
+      </motion.div>
+    );
+
+    return skill.url ? (
+      <a
+        key={index}
+        href={skill.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        {content}
+      </a>
+    ) : (
+      content
+    );
+  })}
+</div>
+
       </section>
 
       {/* Contact Section */}
