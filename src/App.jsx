@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaGitAlt, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiRedux, SiFirebase } from "react-icons/si";
 import "./App.css";
 
 function App() {
@@ -56,6 +59,55 @@ function App() {
           {darkMode ? "☀️" : "🌙"}
         </button>
       </nav>
+      <section className="py-4">
+  <Marquee
+    gradient={false}
+    speed={50}
+    className={`text-lg font-semibold ${
+      darkMode ? "text-gray-200" : "text-[#36454F]"
+    }`}
+  >
+    <div className="flex gap-10 items-center">
+      <span className="flex items-center gap-2">
+        <FaHtml5 className="text-orange-600" /> HTML5
+      </span>
+      <span className="flex items-center gap-2">
+        <FaCss3Alt className="text-blue-600" /> CSS3
+      </span>
+      <span className="flex items-center gap-2">
+        <FaJs className="text-yellow-400" /> JavaScript
+      </span>
+      <span className="flex items-center gap-2">
+        <FaReact className="text-cyan-400" /> React.js
+      </span>
+      <span className="flex items-center gap-2">
+        <SiRedux className="text-purple-600" /> Redux Toolkit
+      </span>
+      <span className="flex items-center gap-2">
+        <SiTailwindcss className="text-cyan-500" /> Tailwind CSS
+      </span>
+      <span className="flex items-center gap-2">
+        <SiFirebase className="text-yellow-500" /> Firebase
+      </span>
+      <span className="flex items-center gap-2">
+        <FaGitAlt className="text-red-600" /> Git
+      </span>
+      <span className="flex items-center gap-2">
+        <FaGithub className="text-yellow-500" /> GitHub
+      </span>
+      <span className="flex items-center gap-2">
+        <FaNodeJs className="text-green-600" /> Node.js
+      </span>
+      <span className="flex items-center gap-2">
+        📊 Excel
+      </span>
+      <span className="flex items-center gap-2">
+      </span>
+    </div>
+  </Marquee>
+</section>
+   
+      
 
       {/* Hero Section */}
       <section
@@ -338,7 +390,7 @@ function App() {
           darkMode ? "bg-gray-900 text-gray-400" : "bg-gray-100 text-gray-600"
         }`}
       >
-        <p>© {new Date().getFullYear()} Bittu Pathania. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Bittu Pathania. Crafted with ❤️</p>
       </footer>
     </div>
   );
