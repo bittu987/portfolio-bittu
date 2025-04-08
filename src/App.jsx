@@ -300,15 +300,15 @@ function App() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
   {[
     { url: "https://react.dev/", name: "React", icon: "⚛️" },
-    { url: "https://redux-toolkit.js.org/", name: "Redux Toolkit", icon: "🔄" },
-    {url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", name: "JavaScript", icon: "📜" },
+    { url: "https://redux-toolkit.js.org/", name: "Redux Toolkit", icon: <SiRedux className="text-purple-600" /> },
+    {url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     {url: "https://tailwindcss.com/", name: "Tailwind CSS", icon: "🎨" },
     {url: "https://firebase.google.com/docs", name: "Firebase", icon: "🔥" },
-    {url: "https://git-scm.com/doc", name: "Git", icon: "🐙" },
-    {url: "https://docs.github.com/en", name: "GitHub", icon: "💻" },
-    {url: "https://developer.mozilla.org/en-US/docs/Web/HTML", name: "HTML5", icon: "🖊️" },
-    {url: "https://developer.mozilla.org/en-US/docs/Web/CSS", name: "CSS3", icon: "🎀" },
-    {url: "https://nodejs.org/docs/latest/api/", name: "Node.js", icon: "🟢" },
+    {url: "https://git-scm.com/doc", name: "Git", icon: <FaGitAlt className="text-red-600" /> },
+    {url: "https://docs.github.com/en", name: "GitHub", icon: <FaGithub className="text-yellow-500" />},
+    {url: "https://developer.mozilla.org/en-US/docs/Web/HTML", name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
+    {url: "https://developer.mozilla.org/en-US/docs/Web/CSS", name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />},
+    {url: "https://nodejs.org/docs/latest/api/", name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
     {url: "https://www.mongodb.com/docs/", name: "MongoDB", icon: "🍃" },
     {url: "https://www.customguide.com/cheat-sheet/excel-cheat-sheet.pdf", name: "Excel", icon: "📊" },
   ].map((skill, index) => {
