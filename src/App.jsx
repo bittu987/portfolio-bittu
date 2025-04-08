@@ -43,11 +43,11 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen font-[Poppins] transition-colors duration-300 ${
-        darkMode
-          ? "dark bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
-          : "bg-gradient-to-br from-white via-blue-50 to-purple-100"
-      }`}
+    className={`min-h-screen font-[Poppins] transition-colors duration-700 ease-in-out ${
+      darkMode
+        ? "bg-[linear-gradient(90deg,_rgba(2,0,36,1)_0%,_rgba(50,50,51,1)_35%,_rgba(35,97,111,1)_54%,_rgba(28,120,139,1)_63%,_rgba(63,66,66,1)_73%,_rgba(0,212,255,1)_100%)]"
+        : "bg-gradient-to-br from-[#ffffff] via-[#f0f4ff] to-[#d0e0ff]"
+    }`}
     >
       {/* Navigation */}
       <nav className="flex justify-end items-center p-6">
@@ -112,7 +112,7 @@ function App() {
       {/* Hero Section */}
       <section
         className={`text-center py-20 px-4 md:px-0 ${
-          darkMode ? "bg-gray-800" : "bg-white"
+          darkMode ? "bg-gradient-to-r from-[#00C9FF] to-[#0c0c0c]" : "bg-white"
         } shadow-md rounded-b-3xl`}
       >
         <motion.div
@@ -126,16 +126,18 @@ function App() {
             }`}
           >
             Hi, I'm{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-              Bittu Pathania
-            </span>
+            <span
+  className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%_200%] animate-textShine transition-all duration-300 hover:drop-shadow-[0_0_10px_#92FE9D] hover:brightness-125"
+>
+  Bittu Pathania
+</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className={`mt-6 text-xl md:text-2xl ${
-              darkMode ? "text-gray-300" : "text-gray-600"
+            className={`mt-6 text-xl md:text-3xl ${
+              darkMode ? "text-white" : "text-gray-600"
             }`}
           >
             Software Developer | React Enthusiast
@@ -298,26 +300,28 @@ function App() {
             { name: "Excel", icon: "📊" },
           ].map((skill, index) => (
             <motion.div
-              key={index}
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`p-6 rounded-xl shadow-lg flex flex-col items-center ${
-                darkMode ? "bg-gray-800" : "bg-white"
-              }`}
-            >
-              <span className="text-3xl mb-2">{skill.icon}</span>
-              <h3
-                className={`font-bold text-lg ${
-                  darkMode ? "text-white" : "text-gray-800"
-                }`}
-              >
-                {skill.name}
-              </h3>
-            </motion.div>
+  key={index}
+  whileHover={{ scale: 1.05, y: -5 }}
+  whileTap={{ scale: 0.95 }}
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  className={`p-6 rounded-xl shadow-lg flex flex-col items-center transition-all duration-300 ease-in-out ${
+    darkMode
+      ? "bg-gray-800 hover:shadow-[0_0_20px_#60a5fa] hover:bg-gradient-to-r hover:from-gray-800 hover:via-gray-700 hover:to-gray-800"
+      : "bg-white hover:shadow-[0_0_20px_#6366f1] hover:bg-gradient-to-r hover:from-white hover:via-purple-100 hover:to-white"
+  }`}
+>
+  <span className="text-3xl mb-2">{skill.icon}</span>
+  <h3
+    className={`font-bold text-lg transition-colors ${
+      darkMode ? "text-white" : "text-gray-800"
+    }`}
+  >
+    {skill.name}
+  </h3>
+</motion.div>
           ))}
         </div>
       </section>
