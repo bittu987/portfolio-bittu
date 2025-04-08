@@ -6,30 +6,30 @@ import { SiTailwindcss, SiRedux, SiFirebase } from "react-icons/si";
 import "./App.css";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [experience, setExperience] = useState({ years: 0, months: 0 });
 
-  useEffect(() => {
-    const startDate = new Date("2023-02-01");
-    const now = new Date();
+  // useEffect(() => {
+  //   const startDate = new Date("2023-02-01");
+  //   const now = new Date();
 
-    let totalMonths =
-      (now.getFullYear() - startDate.getFullYear()) * 12 +
-      (now.getMonth() - startDate.getMonth());
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
+  //   let totalMonths =
+  //     (now.getFullYear() - startDate.getFullYear()) * 12 +
+  //     (now.getMonth() - startDate.getMonth());
+  //   const years = Math.floor(totalMonths / 12);
+  //   const months = totalMonths % 12;
 
-    setExperience({ years, months });
-  }, []);
+  //   setExperience({ years, months });
+  // }, []);
 
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setDarkMode(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     setDarkMode(true);
+  //   }
+  // }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
