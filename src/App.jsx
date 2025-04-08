@@ -266,7 +266,7 @@ function App() {
                 <li>
                   ✅ Full Stack Developer –{" "}
                   <a href="https://www.geekster.in/" target="_blank">
-                  <span className="text-blue-400">Geekster</span>
+                  <span className="text-blue-400">Geekster (Tech School)</span>
                   </a>
                   
                 </li>
