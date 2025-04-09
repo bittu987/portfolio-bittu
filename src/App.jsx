@@ -358,7 +358,7 @@ function App() {
 
       {/* Contact Section */}
       <section
-        className={`py-20 px-6 text-center ${
+        className={`py-4 px-6 text-center ${
           darkMode ? "bg-gray-900" : "bg-gray-800"
         } rounded-t-3xl`}
       >
@@ -420,7 +420,7 @@ function App() {
 
       {/* Footer */}
       <footer
-        className={`py-6 text-center ${
+        className={`py-4 text-center ${
           darkMode ? "bg-gray-900 text-gray-400" : "bg-gray-100 text-gray-600"
         }`}
       >
