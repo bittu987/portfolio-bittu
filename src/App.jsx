@@ -10,7 +10,7 @@ function App() {
   const [experience, setExperience] = useState({ years: 0, months: 0 });
 
   useEffect(() => {
-    const startDate = new Date("2023-02-01");
+    const startDate = new Date("2022-02-01");
     const now = new Date();
 
     let totalMonths =
